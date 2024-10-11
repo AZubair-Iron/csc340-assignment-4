@@ -36,7 +36,7 @@ public class AnimalController {
 
 
     /**
-     * Get a list of Animals based on their major.
+     * Get a list of Animals based on their species.
      * http://localhost:8080/animals/species?species="Mammals"
      *
      * @param species the search key.
@@ -48,15 +48,27 @@ public class AnimalController {
     }
 
     /**
-     * Get a list of Animals based on their major.
+     * Get a list of Animals based on their habitat.
      * http://localhost:8080/animals/habitat?habitat="home"
      *
      * @param habitat the search key.
      * @return A list of Animal objects matching the search key.
      */
-    @GetMapping("habitat")
+    @GetMapping("/habitat")
     public List<Animal> getAnimalsByHabitat(@RequestParam(name = "habitat", defaultValue = "home") String habitat) {
         return service.getAnimalsByHabitat(habitat);
+    }
+
+    /**
+     * Get a list of Animals based on their name.
+     * http://localhost:8080/animals/name?name="Human"
+     *
+     * @param name the search key.
+     * @return A list of Animal objects matching the search key.
+     */
+    @GetMapping("/name")
+    public List<Animal> getAnimalsByName(@RequestParam(name = "name", defaultValue = "human") String name) {
+        return service.getAnimalsByName(name);
     }
 
         /**
