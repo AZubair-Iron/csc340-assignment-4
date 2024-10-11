@@ -41,12 +41,10 @@ Use POSTMAN to try the following endpoints:
 
    ### Response
 
-   [
    
-     { "animalId": 1, "name":"Test1", "scienceName": "Test1", "species": "Test1", "habitat": "Home", "description": "Test"},
+      { "animalId": 1, "name":"Test1", "scienceName": "Test1", "species": "Test1", "habitat": "Home", "description": "Test"},
       { "animalId": 2, "name":"Test2", "scienceName": "Test2", "species": "Test2", "habitat": "Home", "description": "Test"},
    
-  ]
 
 ## Get Animals by Species
 
@@ -54,18 +52,14 @@ Use POSTMAN to try the following endpoints:
 
     `GET /animals/species?species=Mammals`
 
-    `http://localhost:8080/animals/species?species=Mammals'
+    `http://localhost:8080/animals/species?species=Mammals`
 
    
 ### Response
-
-     [
-   
-      { "animalId": 1, "name":"Humans", "scienceName": "Homosapiens", "species": "Mammals", "habitat": "Home", "description": "Test"}
-   
+      { "animalId": 1, "name":"Humans", "scienceName": "Homosapiens", "species": "Mammals", "habitat": "Home", "description": "Test"},
       { "animalId": 4, "name": "Elephant", "scienceName": "NULL", "species": "Mammals", "habitat": "Savannah", "description": "The largest land animal" }
    
-     ]
+
 
 ## Get Animal By Habitat
 
@@ -74,38 +68,12 @@ Use POSTMAN to try the following endpoints:
     `GET /animals/habitat?habitat=home`
 
     `http://localhost:8080/animals/habitat?habitat="home"`
-
    
 ### Response
+      { "animalId": 1, "name": "Human", "scienceName": "Homo sapiens", "species": "Mammals", "habitat": "Home", "description": "Test description" }, 
+      { "animalId": 2, "name": "Cat", "scienceName": "NULL", "species": "Mammals", "habitat": "Home", "description": "Test" },
+      { "animalId": 4, "name": "Dog", "scienceName": "NULL", "species": "Mammals", "habitat": "Home",    "description": "Test" }
 
-   [
-   
-     [
-  {
-    "animalId": 1,
-    "name": "Human",
-    "scienceName": "Homo sapiens",
-    "species": "Mammals",
-    "habitat": "Home",
-    "description": "Test description"
-  },
-  {
-    "animalId": 2,
-    "name": "Cat",
-    "scienceName": "NULL",
-    "species": "Mammals",
-    "habitat": "Home",
-    "description": "Test"
-  },
-  {
-    "animalId": 4,
-    "name": "Dog",
-    "scienceName": "NULL",
-    "species": "Mammals",
-    "habitat": "Home",
-    "description": "Test"
-  }
-]
 
 ## Get Animal by Name
 
@@ -117,9 +85,7 @@ Use POSTMAN to try the following endpoints:
 
 ### Response
 
-[
-{ "animalId": 1, "name":"Humans", "scienceName": "Homosapiens", "species": "Mammals", "habitat": "Home", "description": "Test"}
-]
+     { "animalId": 1, "name":"Humans", "scienceName": "Homosapiens", "species": "Mammals", "habitat": "Home", "description": "Test"}
 
 
 
@@ -133,13 +99,7 @@ Use POSTMAN to try the following endpoints:
 
    ### Response
    
-    {
-  "name": "Elephant",
-  "scienceName": "NULL",
-  "species": "Mammals",
-  "habitat": "Savannah",
-  "description": "Test"
-}
+    { "name": "Elephant", "scienceName": "NULL", "species": "Mammals", "habitat": "Savannah", description": "Test" }
 
 
 
@@ -153,34 +113,32 @@ Use POSTMAN to try the following endpoints:
 
    ### Response
    
-   [
    
      [
-  {
-    "animalId": 2,
-    "name": "Lion",
-    "scienceName": "NULL",
-    "species": "Mammals",
-    "habitat": "Savannah",
-    "description": "Test"
-  },
-  {
-    "animalId": 3,
-    "name": "Elephant",
-    "scienceName": "NULL",
-    "species": "Mammals",
-    "habitat": "Savannah",
-    "description": "Test"
-  },
-  {
-    "animalId": 4,
-    "name": "Penguin",
-    "scienceName": "NULL",
-    "species": "Birds",
-    "habitat": "Antarctica",
-    "description": "Test"
-  }
-]
+          {
+            "animalId": 2,
+            "name": "Lion",
+            "scienceName": "NULL",
+            "species": "Mammals",
+            "habitat": "Savannah",
+            "description": "Test"
+          },
+          {
+            "animalId": 3,
+            "name": "Elephant",
+            "scienceName": "NULL",
+            "species": "Mammals",
+            "habitat": "Savannah",
+            "description": "Test"
+          },
+          {
+            "animalId": 4,
+            "name": "Penguin",
+            "scienceName": "NULL",
+            "species": "Birds",
+            "habitat": "Antarctica",
+            "description": "Test"
+          }
+        ]
 
    
-  ]
